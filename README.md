@@ -1,5 +1,8 @@
 # HAComputerGateway
 
+## 注意事项
+服务依赖.NET8控制台运行时[下载地址](https://dotnet.microsoft.com/zh-cn/download/dotnet/8.0)
+
 ## MQTT中推送的电脑信息Json格式
 ```
 {
