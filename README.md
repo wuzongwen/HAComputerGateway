@@ -17,21 +17,21 @@
       "Name": "C",
       "TotalSize": "300.58 GB",
       "FreeSpace": "37.47 GB",
-      "UsedMemorypace": "263.11 GB",
+      "UsedSpace": "263.11 GB",
       "DriveType": "Fixed"
     },
     {
       "Name": "D",
       "TotalSize": "454.57 GB",
       "FreeSpace": "118.92 GB",
-      "UsedMemorypace": "335.65 GB",
+      "UsedSpace": "335.65 GB",
       "DriveType": "Fixed"
     },
     {
       "Name": "E",
       "TotalSize": "152.33 GB",
       "FreeSpace": "12.04 GB",
-      "UsedMemorypace": "140.29 GB",
+      "UsedSpace": "140.29 GB",
       "DriveType": "Fixed"
     }
   ],
