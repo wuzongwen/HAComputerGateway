@@ -3,6 +3,30 @@
 ## 注意事项
 服务依赖.NET8控制台运行时[下载地址](https://dotnet.microsoft.com/zh-cn/download/dotnet/8.0)
 
+## 使用步骤
+### 1.下载压缩包解压
+### 2.修改目录下的appsetting.json配置文件
+```
+{
+  "ServiceConfig": {
+    "ServiceDescription": "HomeAssistant获取电脑相关信息和控制电脑的服务", //服务描述
+    "ServiceName": "HAComputerGateway", //服务名称
+    "MqttBroker": "192.168.100.1", //MQTT服务器地址
+    "MqttPort": 1883, //MQTT服务器端口
+    "MqttUserName": "admin", //MQTT用户名
+    "MqttPassword": "111111", //MQTT密码
+    "MqttClientId": "00001", //客户端ID,多台电脑请保持唯一
+    "MqttTopic": "homeassistant/computergateway", //MQTT主题
+    "ShutDownTopic": "shutdown", //关机主题名称
+    "SystemInfoTopic": "systeminfo", //系统信息主题名称
+    "ShutDownInstruction": "shutdown", //关机指令
+    "TimeDelay": 10, //关机延时，单位秒
+    "SystemInfoPushInterval": 10 //系统信息推送间隔，单位秒
+  }
+}
+```
+### 3.执行HAComputerGateway.exe文件打开控制台程序，如果运行正常会显示如下内容
+![输入图片说明](https://private-user-images.githubusercontent.com/16460092/421225477-d633218a-58eb-4faf-9faf-912e61a784be.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDE2NzU5NjcsIm5iZiI6MTc0MTY3NTY2NywicGF0aCI6Ii8xNjQ2MDA5Mi80MjEyMjU0NzctZDYzMzIxOGEtNThlYi00ZmFmLTlmYWYtOTEyZTYxYTc4NGJlLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTAzMTElMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwMzExVDA2NDc0N1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTlmNTIyZjA5ZmQ1Mjc3NjUzMzFmMGMzZmM5MzdkZTVmYjY0NmIyMmEzMDg0MjliZWI5MGUxZTFjZTY0NDg4YmImWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.1-hBH1nIcqBV_XHSLJlDzEsAx8PiVq8NWi6gHFaJPLE)
 ## MQTT中推送的电脑信息Json格式
 ```
 {
