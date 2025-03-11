@@ -142,7 +142,10 @@ cards:
 <img src="https://github.com/user-attachments/assets/14217cc7-0998-4940-9bea-70f9ce70407c" alt="图片描述" width="250" height="450" />
 <img src="https://github.com/user-attachments/assets/b20c8727-ac46-4075-8261-9fd3f49623d6" alt="图片描述" width="250" height="450" />
 
-## MQTT中推送的电脑信息Json格式
+### 8.执行目录下的install.bat文件安装服务，后面就会以系统服务的形式运行了
+
+# 扩展
+## MQTT中推送的电脑信息Json格式,如果HA大佬可以开发卡片的话，看看是否有用
 ```
 {
   "MachineName": "xxx的电脑",
