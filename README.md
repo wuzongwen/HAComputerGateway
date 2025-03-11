@@ -139,7 +139,7 @@ cards:
 
 ### 7.如果一切正常，到这里卡片就可以正常显示出来了，点击卡片可以控制电脑开机关机，关机状态下不显示设备信息
 ![输入图片说明](https://github.com/user-attachments/assets/e3a123a0-81d3-4774-9523-774643af5b09)
-<img src="[image.jpg](https://github.com/user-attachments/assets/e3a123a0-81d3-4774-9523-774643af5b09)" alt="图片描述" width="200" height="100" />
+<img src="https://github.com/user-attachments/assets/e3a123a0-81d3-4774-9523-774643af5b09" alt="图片描述" width="200" height="100" />
 ![输入图片说明](https://github.com/user-attachments/assets/14217cc7-0998-4940-9bea-70f9ce70407c)
 ![输入图片说明](https://github.com/user-attachments/assets/b20c8727-ac46-4075-8261-9fd3f49623d6)
 
