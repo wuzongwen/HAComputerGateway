@@ -33,11 +33,15 @@
 ### 4.HACS中安装button-card
 
 ### 5.编辑configuration.yaml添加以下配置，这里的配置是单台电脑的，如果需要控制多台电脑，每一台电脑都要添加一组下面的配置
+button用于控制电脑关机
+sensor获取电脑的设备信息
+switch控制电脑开机
+下一步的button-card配置中需要用到
 ```
 mqtt:
   - button:
       unique_id: pc001_btn
-      name: "PC001关机"   # 定义HA中实体的名称,可任意命名
+      name: "pc001btn"   # 定义HA中实体的名称,可任意命名
       command_topic: "homeassistant/hacmputergateway/00001/shutdown"   # 发送关机指令的主题名称
       payload_press: "shutdown"   # 发送的关机指令
       qos: 0
@@ -45,14 +49,14 @@ mqtt:
       entity_category: "config"
       device_class: "restart"
   - sensor:
-      name: "PC001"    # 定义HA中实体的名称,可任意命名
+      name: "pc001sensor"    # 定义HA中实体的名称,可任意命名
       state_topic: "homeassistant/hacmputergateway/00001/systeminfo"   # 订阅系统信息的主题名称
       value_template: "{{ value_json.MachineName }}"
       json_attributes_topic: "homeassistant/hacmputergateway/00001/systeminfo"   # 订阅系统信息的主题名称
       json_attributes_template: "{{ value_json | tojson }}"
 switch:
   - platform: wake_on_lan
-    name: "pc001"                 # 定义HA中实体的名称,可任意命名
+    name: "pc001switch"                 # 定义HA中实体的名称,可任意命名
     mac: "04:42:1a:ec:a5:8f"        # 主机(电脑)的MAC地址
     host: "192.168.100.10"            # 主机(电脑)地址,可省略
     broadcast_address: "192.168.100.255"      # 广播地址.不可省略.此处假设路由器地址为192.168.1.1,如为其他网段需要修改
@@ -64,7 +68,7 @@ switch:
 type: vertical-stack
 cards:
   - type: custom:button-card
-    entity: switch.pc001
+    entity: switch.pc001switch
     name: 家里电脑
     icon: mdi:desktop-tower-monitor
     show_name: true
@@ -77,19 +81,19 @@ cards:
       service_data:
         entity_id: >
           [[[ return entity.state === 'off' ? 'switch.jia_li_dian_nao' :
-          'button.pc001guan_ji'; ]]]
+          'button.pc001btn'; ]]]
       confirmation:
         text: |
           [[[ return entity.state === 'off' ? '确定要开机吗？' : '确定要关机吗？'; ]]]
   - type: conditional
     conditions:
-      - entity: switch.jia_li_dian_nao
+      - entity: switch.pc001switch
         state: "on"
     card:
       type: vertical-stack
       cards:
         - type: custom:button-card
-          entity: sensor.pc001
+          entity: sensor.pc001sensor
           show_name: false
           show_icon: false
           show_label: true
