@@ -1,4 +1,5 @@
 ﻿using HAComputerGateway.Core.Configs;
+using HAComputerGateway.Core.Helpers;
 using HAComputerGateway.Core.Services;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;

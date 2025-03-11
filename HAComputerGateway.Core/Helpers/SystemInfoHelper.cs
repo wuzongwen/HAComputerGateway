@@ -21,6 +21,7 @@ namespace HAComputerGateway.Core.Helpers
         {
             try
             {
+                int systemStatus = 1;
                 // 1. 计算机名和系统版本
                 string machineName = Regex.Unescape(Environment.MachineName);
                 string osVersion = GetWmiOSCaption();
@@ -43,6 +44,10 @@ namespace HAComputerGateway.Core.Helpers
                 {
                     // 如果 WMI 查询失败，则使用环境变量
                     processorName = processorName + " (WMI query failed: " + ex.Message + ")";
+                    if (ex.Message.Contains("Error"))
+                    {
+                        systemStatus = 0;
+                    }
                 }
 
                 // 3. 内存信息，通过 WMI 查询 Win32_OperatingSystem
@@ -67,18 +72,21 @@ namespace HAComputerGateway.Core.Helpers
                 }
                 catch (Exception ex)
                 {
-                    totalMemory = "Error: " + ex.Message;
-                    freeMemory = "Error: " + ex.Message;
-                    usedMemory = "Error: " + ex.Message;
+                    if (ex.Message.Contains("Error"))
+                    {
+                        systemStatus = 0;
+                    }
                 }
 
                 // 4. 磁盘信息，获取所有已准备好的盘
                 var disks = DriveInfo.GetDrives()
                     .Where(d => d.IsReady && d.DriveType == DriveType.Fixed)
-                    .Select(d => new {
-                        d.Name,
-                        TotalSize = (d.TotalSize / (1024 * 1024 * 1024)) + " GB",
-                        FreeSpace = (d.TotalFreeSpace / (1024 * 1024 * 1024)) + " GB",
+                    .Select(d => new
+                    {
+                        Name = d.Name.Substring(0, 1),
+                        TotalSize = (d.TotalSize / (1024.0 * 1024.0 * 1024.0)).ToString("F2") + " GB",
+                        FreeSpace = (d.TotalFreeSpace / (1024.0 * 1024.0 * 1024.0)).ToString("F2") + " GB",
+                        UsedMemorypace = ((d.TotalSize - d.TotalFreeSpace) / (1024.0 * 1024.0 * 1024.0)).ToString("F2") + " GB",
                         DriveType = d.DriveType.ToString()
                     });
 
@@ -96,6 +104,7 @@ namespace HAComputerGateway.Core.Helpers
                     OSVersion = osVersion,
                     Processor = processorName,
                     CpuUsage = cpuUsage.ToString("F2") + " %",
+                    Status = systemStatus,
                     Memory = new
                     {
                         TotalMemory = totalMemory,
