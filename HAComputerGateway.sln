@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35707.178 d17.12
+VisualStudioVersion = 17.12.35707.178
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HAComputerGateway", "HAComputerGateway\HAComputerGateway.csproj", "{E3633AD4-4B40-44E9-B160-D54982A9D5F1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HAComputerGateway.Core", "HAComputerGateway.Core\HAComputerGateway.Core.csproj", "{FFCE9278-96C3-48D5-8EDB-AC36D6811804}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HAComputerGateway.Win7", "HAComputerGateway.Win7\HAComputerGateway.Win7.csproj", "{1D6034DA-D031-4E92-9C01-487F819BE8D5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{FFCE9278-96C3-48D5-8EDB-AC36D6811804}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FFCE9278-96C3-48D5-8EDB-AC36D6811804}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FFCE9278-96C3-48D5-8EDB-AC36D6811804}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D6034DA-D031-4E92-9C01-487F819BE8D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D6034DA-D031-4E92-9C01-487F819BE8D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D6034DA-D031-4E92-9C01-487F819BE8D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D6034DA-D031-4E92-9C01-487F819BE8D5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
