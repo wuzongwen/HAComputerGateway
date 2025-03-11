@@ -28,7 +28,7 @@
 ```
 
 ### 3.执行HAComputerGateway.exe文件打开控制台程序，如果运行正常会显示如下内容
-![输入图片说明](https://private-user-images.githubusercontent.com/16460092/421225477-d633218a-58eb-4faf-9faf-912e61a784be.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDE2NzU5NjcsIm5iZiI6MTc0MTY3NTY2NywicGF0aCI6Ii8xNjQ2MDA5Mi80MjEyMjU0NzctZDYzMzIxOGEtNThlYi00ZmFmLTlmYWYtOTEyZTYxYTc4NGJlLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTAzMTElMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwMzExVDA2NDc0N1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTlmNTIyZjA5ZmQ1Mjc3NjUzMzFmMGMzZmM5MzdkZTVmYjY0NmIyMmEzMDg0MjliZWI5MGUxZTFjZTY0NDg4YmImWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.1-hBH1nIcqBV_XHSLJlDzEsAx8PiVq8NWi6gHFaJPLE)
+<img src="https://private-user-images.githubusercontent.com/16460092/421225477-d633218a-58eb-4faf-9faf-912e61a784be.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDE2NzU5NjcsIm5iZiI6MTc0MTY3NTY2NywicGF0aCI6Ii8xNjQ2MDA5Mi80MjEyMjU0NzctZDYzMzIxOGEtNThlYi00ZmFmLTlmYWYtOTEyZTYxYTc4NGJlLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTAzMTElMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwMzExVDA2NDc0N1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTlmNTIyZjA5ZmQ1Mjc3NjUzMzFmMGMzZmM5MzdkZTVmYjY0NmIyMmEzMDg0MjliZWI5MGUxZTFjZTY0NDg4YmImWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.1-hBH1nIcqBV_XHSLJlDzEsAx8PiVq8NWi6gHFaJPLE" alt="图片描述" width="500" height="400" />
 
 ### 4.HACS中安装button-card
 
@@ -138,10 +138,9 @@ cards:
 ```
 
 ### 7.如果一切正常，到这里卡片就可以正常显示出来了，点击卡片可以控制电脑开机关机，关机状态下不显示设备信息
-![输入图片说明](https://github.com/user-attachments/assets/e3a123a0-81d3-4774-9523-774643af5b09)
-<img src="https://github.com/user-attachments/assets/e3a123a0-81d3-4774-9523-774643af5b09" alt="图片描述" width="200" height="100" />
-![输入图片说明](https://github.com/user-attachments/assets/14217cc7-0998-4940-9bea-70f9ce70407c)
-![输入图片说明](https://github.com/user-attachments/assets/b20c8727-ac46-4075-8261-9fd3f49623d6)
+<img src="https://github.com/user-attachments/assets/e3a123a0-81d3-4774-9523-774643af5b09" alt="图片描述" width="200" height="300" />
+<img src="https://github.com/user-attachments/assets/14217cc7-0998-4940-9bea-70f9ce70407c" alt="图片描述" width="200" height="300" />
+<img src="https://github.com/user-attachments/assets/b20c8727-ac46-4075-8261-9fd3f49623d6" alt="图片描述" width="200" height="300" />
 
 ## MQTT中推送的电脑信息Json格式
 ```
