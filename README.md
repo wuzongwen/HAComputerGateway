@@ -33,9 +33,9 @@
 ### 4.HACS中安装button-card
 
 ### 5.编辑configuration.yaml添加以下配置，这里的配置是单台电脑的，如果需要控制多台电脑，每一台电脑都要添加一组下面的配置
-#### button用于控制电脑关机
-#### sensor获取电脑的设备信息
-#### switch控制电脑开机
+##### button用于控制电脑关机
+##### sensor获取电脑的设备信息
+##### switch控制电脑开机
 这三个实体在下一步的button-card配置中会用到
 ```
 mqtt:
