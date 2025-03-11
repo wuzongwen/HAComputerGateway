@@ -86,7 +86,7 @@ namespace HAComputerGateway.Core.Helpers
                         Name = d.Name.Substring(0, 1),
                         TotalSize = (d.TotalSize / (1024.0 * 1024.0 * 1024.0)).ToString("F2") + " GB",
                         FreeSpace = (d.TotalFreeSpace / (1024.0 * 1024.0 * 1024.0)).ToString("F2") + " GB",
-                        UsedMemorypace = ((d.TotalSize - d.TotalFreeSpace) / (1024.0 * 1024.0 * 1024.0)).ToString("F2") + " GB",
+                        UsedSpace = ((d.TotalSize - d.TotalFreeSpace) / (1024.0 * 1024.0 * 1024.0)).ToString("F2") + " GB",
                         DriveType = d.DriveType.ToString()
                     });
 
