@@ -34,7 +34,7 @@ namespace HAComputerGateway.Win7.Serivices
         {
             try
             {
-                Console.WriteLine("服务启动中...");
+                Console.WriteLine("服务已启动，开始检测网络");
                 // 启动定时器，立即开始，间隔10秒（10000毫秒）
                 networkTimer = new System.Timers.Timer(10000);
                 networkTimer.Elapsed += (sender, e) => NetworkCheck();
