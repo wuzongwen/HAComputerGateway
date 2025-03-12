@@ -1,14 +1,14 @@
 # HAComputerGateway
 
 ## 注意事项
-Win10及以上版本依赖.NET8控制台运行时[下载地址](https://dotnet.microsoft.com/zh-cn/download/dotnet/8.0)
+Win10及以上版本依赖.NET8控制台运行时[下载地址](https://dotnet.microsoft.com/zh-cn/download/dotnet/8.0)  
 Win7版本依赖.NET Framework4[下载地址](https://download.microsoft.com/download/9/5/A/95A9616B-7A37-4AF6-BC36-D6EA96C8DAAE/dotNetFx40_Full_x86_x64.exe)
 
 ## 使用步骤
 ### 1.下载压缩包解压
 
 ### 2.修改目录下的appsetting.json配置文件
-Win7版本使用配置文件是根目录下Config.ini文件，配置名称都一样
+注:Win7版本使用配置文件是根目录下Config.ini文件，配置名称都一样
 ```
 {
   "ServiceConfig": {
