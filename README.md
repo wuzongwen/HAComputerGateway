@@ -8,7 +8,7 @@ Win7版本依赖.NET Framework4[下载地址](https://download.microsoft.com/dow
 ### 1.下载压缩包解压
 
 ### 2.修改目录下的appsetting.json配置文件
-注:Win7版本配置文件是根目录下Config.ini文件，配置名称都一样
+注:Win7版本配置文件是根目录下Config.ini文件，配置名称都一样，没有注释可以参照这里修改
 ```
 {
   "ServiceConfig": {
