@@ -55,14 +55,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Configs\AppSetting.cs" />
+    <Compile Include="Helpers\EntityHelper.cs" />
+    <Compile Include="Helpers\IniHelper.cs" />
     <Compile Include="Helpers\MqttHelper.cs" />
     <Compile Include="Helpers\NetworkHelper.cs" />
-    <Compile Include="Helpers\SystemInfoHelper.cs" />
+    <Compile Include="Helpers\SystemHelper.cs" />
+    <Compile Include="Other\NLogTextWriter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Serivices\HAComputerGatewayService.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Config.ini">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="NLog.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

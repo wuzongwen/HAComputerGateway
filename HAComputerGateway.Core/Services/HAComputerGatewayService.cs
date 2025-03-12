@@ -33,9 +33,16 @@ namespace HAComputerGateway.Core.Services
 
         public void Start()
         {
-            Console.WriteLine("服务启动");
-            // 启动定时器，立即开始，间隔10秒（10000毫秒）
-            networkTimer = new Timer(NetworkCheck, null, 0, 10000);
+            try
+            {
+                Console.WriteLine("服务启动");
+                // 启动定时器，立即开始，间隔10秒（10000毫秒）
+                networkTimer = new Timer(NetworkCheck, null, 0, 10000);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("服务启动失败：{0}", JsonSerializer.Serialize(ex));
+            }
         }
 
         public void Stop()

@@ -11,7 +11,7 @@ using Newtonsoft.Json;
 
 namespace HAComputerGateway.Win7.Helpers
 {
-    public class SystemInfoHelper
+    public class SystemHelper
     {
         /// <summary>
         /// 获取系统关键信息，并返回 JSON 格式字符串
@@ -166,6 +166,23 @@ namespace HAComputerGateway.Win7.Helpers
             {
                 Console.WriteLine("获取 CPU 使用率失败：" + ex.Message);
                 return -1; // 返回 -1 表示错误
+            }
+        }
+
+        /// <summary>
+        /// 关机
+        /// </summary>
+        public static void ShutdownComputer(int timeDelay)
+        {
+            try
+            {
+                Console.WriteLine("执行关机指令");
+                Process.Start("shutdown", $"/s /t {timeDelay}");
+                Console.WriteLine("关机指令执行成功");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"关机指令执行失败,{JsonConvert.SerializeObject(ex)}");
             }
         }
     }
