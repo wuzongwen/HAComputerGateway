@@ -1,12 +1,14 @@
 # HAComputerGateway
 
 ## 注意事项
-服务依赖.NET8控制台运行时[下载地址](https://dotnet.microsoft.com/zh-cn/download/dotnet/8.0)
+Win10及以上版本依赖.NET8控制台运行时[下载地址](https://dotnet.microsoft.com/zh-cn/download/dotnet/8.0)  
+Win7版本依赖.NET Framework4[下载地址](https://download.microsoft.com/download/9/5/A/95A9616B-7A37-4AF6-BC36-D6EA96C8DAAE/dotNetFx40_Full_x86_x64.exe)
 
 ## 使用步骤
 ### 1.下载压缩包解压
 
 ### 2.修改目录下的appsetting.json配置文件
+注:Win7版本配置文件是根目录下Config.ini文件，配置名称都一样，没有注释可以参照这里修改
 ```
 {
   "ServiceConfig": {
@@ -33,9 +35,9 @@
 ### 4.HACS中安装button-card
 
 ### 5.编辑configuration.yaml添加以下配置，这里的配置是单台电脑的，如果需要控制多台电脑，每一台电脑都要添加一组下面的配置
-##### button用于控制电脑关机
-##### sensor获取电脑的设备信息
-##### switch控制电脑开机
+button用于控制电脑关机  
+sensor获取电脑的设备信息  
+switch控制电脑开机  
 这三个实体在下一步的button-card配置中会用到
 ```
 mqtt:
